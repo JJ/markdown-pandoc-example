@@ -46,6 +46,7 @@ $if(linestretch)$
   \usepackage{setspace}
   \setstretch{$linestretch$}
 $endif$
+\usepackage{pdflscape}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e} % provides \textsubscript
@@ -388,7 +389,7 @@ $endif$
 % Begin document
 
 \begin{document}
-
+\begin{landscape}
 $if(custom-titlepage)$
   \input{$custom-titlepage$}
   \newpage
@@ -470,5 +471,5 @@ $endif$
 $for(include-after)$
   $include-after$
 $endfor$
-
+\end{landscape}
 \end{document}
